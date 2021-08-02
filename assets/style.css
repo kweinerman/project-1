@@ -7,7 +7,7 @@
 .navbar{
     display: flex;
     align-items: center;
-    padding: 15px;
+    padding: 10px;
 }
 
 nav{
@@ -22,7 +22,7 @@ nav ul{
 
 nav ul li{
     display: inline-block;
-    margin-right: 15px;
+    margin-right: 10px;
 }
 
 a{
@@ -44,7 +44,11 @@ p{
 }
 
 .top{
-    background-color: rgb(233, 187, 131);
+    background: radial-gradient(#fff,rgb(233, 187, 131));
+}
+
+.top .row{
+    margin-top: none;
 }
 
 .col-2{
