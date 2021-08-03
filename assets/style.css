@@ -1,3 +1,11 @@
+:root {
+    --parchment: #F9F5F2;
+    --salmon: #FBACAF;
+    --cloud-blue: #E4F2F5;
+    --green-gray: #CFD6CE;
+    --brown-purple: #c29da8
+}
+
 *{
     margin: 0;
     padding: 0;
@@ -27,24 +35,27 @@ nav ul li{
 
 a{
     text-decoration: none;
-    color: rgb(226, 203, 176);
+    color: black;
+    font-family: 'Acme', sans-serif;
 }
 
 p{
-    color: rgba(78, 70, 60, 0.486);
+    color: (78, 70, 60, 0.486);
     margin-left: 20px;
     margin-right: 20px;
+    font-family: 'Acme', sans-serif;
+    font-size: 20;
 }
 
 .container{
-    max-width: 1300px;
     margin: auto;
     padding-left: 20px;
     padding-right: 20px;
+    background: radial-gradient(#fff,var(--parchment));
 }
 
 .top{
-    background: radial-gradient(#fff,rgb(233, 187, 131));
+    background: radial-gradient(#fff,var(--salmon));
 }
 
 .top .row{
@@ -57,13 +68,32 @@ p{
 
 h3{
     text-align: center;
-    font-family: 'STIX Two Text', serif;
+    font-family: 'Amatic SC', cursive;
+    font-size: 42px;
 }
 
 h1{
-    font-family: 'STIX Two Text', serif;
+    font-family: 'Amatic SC', cursive;
+    font-size: 60px;
+}
+
+h2 {
+    font-family: 'Amatic SC', cursive;
+    font-size: 30px;
 }
 
 .mid{
-    background-color: rgb(231, 146, 146);
+    background: radial-gradient(#fff,var(--parchment));
+}
+
+.products-body {
+    background: radial-gradient(#fff,var(--cloud-blue));
+}
+
+.contact-body {
+    background: radial-gradient(#fff,var(--green-gray));
+}
+
+.location-body {
+    background: radial-gradient(#fff,var(--brown-purple));
 }
