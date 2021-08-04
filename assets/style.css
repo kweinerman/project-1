@@ -87,6 +87,8 @@ h2 {
 }
 
 .products-body {
+    font-family: 'Amatic SC', cursive;
+    font-size: 30px;
     background: radial-gradient(#fff,var(--cloud-blue));
 }
 
