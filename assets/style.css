@@ -99,3 +99,8 @@ h2 {
 .location-body {
     background: radial-gradient(#fff,var(--brown-purple));
 }
+
+#map {
+    height: 400px;
+    width: 100%;
+}

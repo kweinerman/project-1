@@ -4,9 +4,12 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
     <link rel="stylesheet" href="./assets/style.css" />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
     <style>
       @import url('https://fonts.googleapis.com/css2?family=Amatic+SC:wght@700&display=swap');
     </style>
@@ -97,19 +100,13 @@
         <h3>Locations</h3>
       </div>
     </section>
-    <section class="location-body">
-      <div>
-        <br />
-        <br />
-        <br />
-        <br />        
-        <br />        
-        <br />        
-        <br />        
-        <br />        
-        <br />
-      </div>
+    <section class="location-body" id="map-section">
+      <div class="card-block" id="map"></div>
+      <div class="card-block" id="address-components"></div>
     </section>
-    
+    <script async
+    src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBdLL3FMvNVwV0x2d3iiu3RFS3NqQu8PZU&callback=initMap">
+</script>
+   <script src="./assets/script.js"></script> 
   </body>
 </html>
