@@ -36,14 +36,14 @@ nav ul li{
 a{
     text-decoration: none;
     color: black;
-    font-family: 'Acme', sans-serif;
+    font-family: 'Amatic SC', cursive;
 }
 
 p{
     color: (78, 70, 60, 0.486);
     margin-left: 20px;
     margin-right: 20px;
-    font-family: 'Acme', sans-serif;
+    font-family: 'Amatic SC', cursive;
     font-size: 20;
 }
 
