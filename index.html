@@ -147,15 +147,22 @@
     </section>
     <section class="contact-body">
       <div>
-        <br />
-        <br />
-        <br />
-        <br />
-        <br />
-        <br />
-        <br />
-        <br />
-        <br />
+        <form method="POST" class="contact-form">
+          <label for="">Name</label><br />
+          <input class="Name" type="text" placeholder="name" required><br />
+          <label for="">Email</label><br />
+          <input class="Email" type="email" placeholder="email" required><br />
+          <label for="">Message</label><br />
+          <textarea class="message"
+           name="" 
+           id="" 
+           cols="30" 
+           rows="10"
+           placeholder="message"
+           required
+           ></textarea>
+           <button type="submit">Submit</button>
+        </form>
       </div>
     </section>
     <section class="mid">
@@ -167,6 +174,8 @@
       <div class="card-block" id="map"></div>
       <div class="card-block" id="address-components"></div>
     </section>
+    <script src="https://smtpjs.com/v3/smtp.js">
+    </script>
     <script
       async
       src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBdLL3FMvNVwV0x2d3iiu3RFS3NqQu8PZU&callback=initMap"
