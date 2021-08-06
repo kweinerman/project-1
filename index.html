@@ -4,13 +4,6 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link
-      rel="stylesheet"
-      href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
-      integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm"
-      crossorigin="anonymous"
-    />
-    <link rel="stylesheet" href="./assets/style.css" />
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -21,9 +14,10 @@
     <style>
       @import url("https://fonts.googleapis.com/css2?family=Acme&family=Amatic+SC:wght@700&display=swap");
     </style>
+    <link rel="stylesheet" href="./assets/style.css" />
     <title>FreshState</title>
   </head>
-  <body>
+  <body class="">
     <div class="container">
       <div class="navbar">
         <div class="logo">
@@ -73,7 +67,7 @@
         </div>
       </div>
     </section>
-    <section class="mid">
+    <section>
       <div class="products">
         <h3 id="product">Products</h3>
       </div>
@@ -149,19 +143,25 @@
       <div>
         <form method="POST" class="contact-form">
           <label for="">Name</label><br />
-          <input class="Name" type="text" placeholder="name" required><br />
+          <input class="Name" type="text" placeholder="name" required /><br />
           <label for="">Email</label><br />
-          <input class="Email" type="email" placeholder="email" required><br />
+          <input
+            class="Email"
+            type="email"
+            placeholder="email"
+            required
+          /><br />
           <label for="">Message</label><br />
-          <textarea class="message"
-           name="" 
-           id="" 
-           cols="30" 
-           rows="10"
-           placeholder="message"
-           required
-           ></textarea>
-           <button type="submit">Submit</button>
+          <textarea
+            class="message"
+            name=""
+            id=""
+            cols="30"
+            rows="10"
+            placeholder="message"
+            required
+          ></textarea>
+          <button type="submit">Submit</button>
         </form>
       </div>
     </section>
@@ -174,8 +174,7 @@
       <div class="card-block" id="map"></div>
       <div class="card-block" id="address-components"></div>
     </section>
-    <script src="https://smtpjs.com/v3/smtp.js">
-    </script>
+    <script src="https://smtpjs.com/v3/smtp.js"></script>
     <script
       async
       src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBdLL3FMvNVwV0x2d3iiu3RFS3NqQu8PZU&callback=initMap"
