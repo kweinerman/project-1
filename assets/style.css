@@ -52,7 +52,56 @@ p {
   margin-left: 20px;
   margin-right: 20px;
   font-family: "Amatic SC", cursive;
-  font-size: 20;
+  font-size: 30px;
+}
+
+.aboutUsText {
+  font-size: 30px;
+  font-weight: bolder;
+}
+
+.photoContainer {
+  display: flex;
+  flex-direction: row;
+}
+
+.freshStateEmployee {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 300px;
+  height: 400px;
+  padding: 20px;
+}
+
+.freshStateEmployeeTwo {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 300px;
+  height: 400px;
+  padding: 20px;
+  object-fit: cover;
+}
+
+.freshStateEmployeeThree {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 300px;
+  height: 400px;
+  padding: 20px;
+  object-fit: cover;
+}
+
+.freshStateEmployeeFour {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 300px;
+  height: 400px;
+  padding: 20px;
+  object-fit: cover;
 }
 
 .container {
