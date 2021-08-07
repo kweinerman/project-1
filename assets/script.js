@@ -73,24 +73,24 @@ var marker3 = new google.maps.Marker({
 
 // Listen for a submit
 
-document.getElementById("form-submission").addEventListener("click", sendEmail);
+// document.getElementById("form-submission").addEventListener("click", sendEmail);
 
 
 
 //run submit form function 
-function submitForm(event) {
-  event.preventDefault();
-  //get input values
-  let name = document.querySelectorAll(".name").value;
-  let email = document.querySelectorAll(".email").value;
-  let message = document.querySelectorAll(".message").value;
+// function submitForm(event) {
+//   event.preventDefault();
+//   //get input values
+//   let name = document.querySelectorAll(".name").value;
+//   let email = document.querySelectorAll(".email").value;
+//   let message = document.querySelectorAll(".message").value;
 
-  saveContactInfo(name, email, message);
+//   saveContactInfo(name, email, message);
 
-  document.querySelectorAll("form-submission").requestFullscreen();
+//   document.querySelectorAll("form-submission").requestFullscreen();
 
-  sendEmail(name, email, message);
-}
+//   sendEmail(name, email, message);
+// }
 
 // function saveContactInfo(name, email, message) {
 //   let newContactInfo = contactInfo.push();
@@ -137,19 +137,19 @@ function submitForm(event) {
 
 
 // Send Email info function
- function sendEmail(name, email, message){
-Email.send({
-  Host: "smtp.gmail.com",
-  Username: 'freshstatebev@gmail.com',
-  Password: "Fresh$tate99",
-  To: 'freshstatebev@gmail.com',
-  From: 'freshstatebev@gmail.com',
+//  function sendEmail(name, email, message){
+// Email.send({
+//   Host: "smtp.gmail.com",
+//   Username: 'freshstatebev@gmail.com',
+//   Password: "Fresh$tate99",
+//   To: 'freshstatebev@gmail.com',
+//   From: 'freshstatebev@gmail.com',
 
-  Subject: `${name} sent you a message`,
-  Body: `Name: ${name} <br/> Email: ${email} <br/> Message: ${message}`,
-}) .then((message) => alert("Message Sent Successfully"))
+//   Subject: `${name} sent you a message`,
+//   Body: `Name: ${name} <br/> Email: ${email} <br/> Message: ${message}`,
+// }) .then((message) => alert("Message Sent Successfully"))
 
- }
+//  }
 
 
  function getRandomCocktail(){
