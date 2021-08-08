@@ -161,29 +161,34 @@
     <section class="contact-body">
       <div>
         <form method="POST" class="contact-form">
-          <label for="">Name</label><br />
-          <input class="Name" type="text" placeholder="name" required /><br />
-          <label for="">Email</label><br />
+          <fieldset class="contact-input">
+          <label for="">Your Name:</label><br />
+          <input class="Name" type="text" placeholder="Name" required /><br />
+          <br />
+          <label for="">Your Email:</label><br />
           <input
             class="Email"
             type="email"
-            placeholder="email"
+            placeholder="Email"
             required
           /><br />
-          <label for="">Message</label><br />
+          <br />
+          <label for="">Your Message:</label><br />
           <textarea
             class="message"
             name=""
             id=""
             cols="30"
             rows="10"
-            placeholder="message"
+            placeholder="Send Us A Message Here"
             required
           ></textarea>
-          <button type="submit">Submit</button>
+          <br />
+          <button type="submit" class="submit">Contact Us</button>
         </form>
       </div>
     </section>
+  </fieldset>
     <section class="mid">
       <div class="location">
         <h3 id="location">Locations</h3>

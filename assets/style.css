@@ -272,6 +272,41 @@ h4 {
   background: radial-gradient(#fff, var(--brown-purple));
 }
 
+
+/* email input form styling */
+
+.contact-input {
+    margin: 2em 0;
+    padding: 1em 2em;
+    border: solid 2px #fbacaf;
+    border-radius: 6px;
+    min-width: 200px;
+    display: inline-block;
+}
+
+input {
+    padding: .5em;
+    border: solid 1px #fbacaf;
+   
+
+  
+}
+
+textarea {
+    padding: .5em;
+    border: solid 1px #fbacaf;
+}
+
+.submit{
+    padding: .5em 1em;
+    border-radius: 6px;
+    border: solid 1px #fbacaf;
+    background-color: #fbacaf;
+    color: #fff;
+    font-family: "Amatic SC", cursive;
+    font-size: 1em;
+}
+
 #map {
   height: 400px;
   width: 100%;
