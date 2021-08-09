@@ -140,7 +140,7 @@ function initMap() {
 //  }
 
 function getRandomCocktail() {
-  fetch("www.thecocktaildb.com/api/json/v1/1/random.php")
+  fetch("https://www.thecocktaildb.com/api/json/v1/1/random.php")
     .then(function (response) {
       if (response.status !== 200) {
         console.log(
@@ -262,3 +262,57 @@ function generateDots() {
     dotsContainer.append(dotEl);
   }
 }
+
+// Cocktail Api Starts Here
+
+// API https://www.thecocktaildb.com/api/json/v1/1/random.php
+
+console.log('Connected!');
+// $("#recipe").hide();
+$("footer").hide();
+$("#recipe-card").hide();
+
+$(document).ready(function() {
+   
+
+// generate random cocktail on button click
+    $('#generate').click(function() {  
+
+        axios.get('https://www.thecocktaildb.com/api/json/v1/1/random.php')
+        .then(function(response) {
+            console.log(response.data.drinks[0]);            
+
+            $("#drink-name").html('<h2>' + response.data.drinks[0]["strDrink"] + '</h2>');   
+            $("#image").html('<img src=' + response.data.drinks[0]["strDrinkThumb"] + '></img>');
+            $("#category").html("<p id='category-info'><strong>Category:</strong> " + response.data.drinks[0]["strCategory"] + '</p>');
+            $("#type").html("<p><strong>Type:</strong> " + response.data.drinks[0]["strAlcoholic"] + '</p>');
+          
+            $("#recipe").show();
+
+            // ingredients         
+            
+            // figure out a way to handle null or "" lines -- probably need a for-loop
+            $("#ingredients-list").append('<li>' + response.data.drinks[0]["strMeasure1"] + " " + response.data.drinks[0]["strIngredient1"] + '</li>');
+            $("#ingredients-list").append('<li>' + response.data.drinks[0]["strMeasure2"] + " " + response.data.drinks[0]["strIngredient2"] + '</li>');
+            $("#ingredients-list").append('<li>' + response.data.drinks[0]["strMeasure3"] + " " + response.data.drinks[0]["strIngredient3"] + '</li>');
+            $("#ingredients-list").append('<li>' + response.data.drinks[0]["strMeasure4"] + " " + response.data.drinks[0]["strIngredient4"] + '</li>');
+            $("#ingredients-list").append('<li>' + response.data.drinks[0]["strMeasure5"] + " " + response.data.drinks[0]["strIngredient5"] + '</li>');
+            $("#ingredients-list").append('<li>' + response.data.drinks[0]["strMeasure6"] + " " + response.data.drinks[0]["strIngredient6"] + '</li>');
+            $("#ingredients-list").append('<li>' + response.data.drinks[0]["strMeasure7"] + " " + response.data.drinks[0]["strIngredient7"] + '</li>');
+            $("#ingredients-list").append('<li>' + response.data.drinks[0]["strMeasure8"] + " " + response.data.drinks[0]["strIngredient8"] + '</li>');
+            $("#ingredients-list").append('<li>' + response.data.drinks[0]["strMeasure9"] + " " + response.data.drinks[0]["strIngredient9"] + '</li>');
+            $("#ingredients-list").append('<li>' + response.data.drinks[0]["strMeasure10"] + " " + response.data.drinks[0]["strIngredient10"] + '</li>');
+
+            
+            $("#instructions").html('<p>' + response.data.drinks[0]["strInstructions"] +'</p>');
+            $("#recipe-card").show();
+            $("footer").show();
+            
+
+        
+
+        });
+    });
+
+
+});

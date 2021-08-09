@@ -265,6 +265,11 @@ h4 {
 }
 
 .contact-body {
+    
+    display: flex;
+    height: 75vh;
+    justify-content: center;
+    align-items: center;
   background: radial-gradient(#fff, var(--green-gray));
 }
 
@@ -276,12 +281,13 @@ h4 {
 /* email input form styling */
 
 .contact-input {
+
     margin: 2em 0;
     padding: 1em 2em;
     border: solid 2px #fbacaf;
     border-radius: 6px;
     min-width: 200px;
-    display: inline-block;
+    
 }
 
 input {
@@ -320,4 +326,90 @@ textarea {
 #drink-secion img {
   width: 100%;
   height: auto;
+}
+
+/* .randomCocktail {
+    padding: .5em 1em;
+    border-radius: 5px;
+    border: solid 1px #0a0404;
+    background-color: #e9b0b0f1;
+    color: white;
+    font-family: "Amatic SC", cursive;
+    font-size: 2em;
+} */
+
+#generate-button {
+    margin-top: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+} 
+
+/* style the button */
+button {
+    width: 340px;
+    height: 50px;
+    font-size: 24px;
+    color: white;
+    background-color: rgb(90, 196, 196);
+    border: 4px solide white; 
+}
+
+button:hover {
+/*     box-shadow: 5px 5px 10px black; */
+    background-color: white;
+    color: teal;
+  
+}
+
+#recipe-card {
+/*   background-color: #efedf4; */
+  width: 70%;
+  height: 100%;
+  justify-content: center;
+  margin: auto;
+/*   box-shadow: 5px 5px 5px black; */
+  padding-bottom: 100px;
+}
+
+#drink-name {
+    text-align: center;
+    margin: 20px 0 20px 0;
+    padding-top: 10px;
+    font-family: 'Pacifico', cursive;
+    font-size: 1em;
+    /* color: white; */
+    font-family: 'Rammetto One', cursive;
+}
+
+img {
+    width: 25%;
+    height: 25%;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    border-radius: 8px;
+    border: 5px solid white;
+}
+
+#image {
+    margin-bottom: 40px;
+/*     padding-left: 20px; */
+
+}
+
+#category, #type, #recipe, #instructions {
+    margin: 0 40px 0 40px;  
+}
+
+#recipe > p {
+    font-weight: bold;
+}
+
+#category-info {
+    text-align: left;
+}
+
+#instructions {
+  padding-bottom: 30px;
 }
