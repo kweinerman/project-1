@@ -13,6 +13,7 @@ function initMap() {
   var marker = new google.maps.Marker({
     position: { lat: 39.7273336, lng: -105.0535381 },
     map: map,
+    label: { color: 'black', fontWeight: 'bold', fontSize: '8px', text: 'Brewery' }
   });
 
   // var infoWindow = new google.maps.infoWindow({
@@ -26,6 +27,7 @@ function initMap() {
   var marker1 = new google.maps.Marker({
     position: { lat: 39.734572, lng: -104.9618063 },
     map: map,
+    label: { color: 'black', fontWeight: 'bold', fontSize: '8px', text: 'Sales' }
   });
 
   // var infoWindow = new google.maps.infoWindow({
@@ -35,12 +37,9 @@ function initMap() {
   var marker2 = new google.maps.Marker({
     position: { lat: 39.6964946, lng: -104.9496032 },
     map: map,
+    label: { color: 'black', fontWeight: 'bold', fontSize: '8px', text: 'Office' }
   });
 
-  var marker3 = new google.maps.Marker({
-    position: { lat: 39.6964946, lng: -104.9496032 },
-    map: map,
-  });
 }
 
 // Contact Form Mailer
@@ -294,28 +293,27 @@ $(document).ready(function() {
             // figure out a way to handle null or "" lines -- probably need a for-loop
           
 
-            $("#ingredients-list").append('<li>' + response.data.drinks[0]["strMeasure1"] + " " + response.data.drinks[0]["strIngredient1"] + '</li>');
-
-           
+            // $("#ingredients-list").append('<li>' + response.data.drinks[0]["strMeasure1"] + " " + response.data.drinks[0]["strIngredient1"] + '</li>');
             
-            $("#ingredients-list").append('<li>' + response.data.drinks[0]["strMeasure1"] + " " + response.data.drinks[0]["strIngredient1"] + '</li>');
-            $("#ingredients-list").append('<li>' + response.data.drinks[0]["strMeasure2"] + " " + response.data.drinks[0]["strIngredient2"] + '</li>');
-            $("#ingredients-list").append('<li>' + response.data.drinks[0]["strMeasure3"] + " " + response.data.drinks[0]["strIngredient3"] + '</li>');
-            $("#ingredients-list").append('<li>' + response.data.drinks[0]["strMeasure4"] + " " + response.data.drinks[0]["strIngredient4"] + '</li>');
-            $("#ingredients-list").append('<li>' + response.data.drinks[0]["strMeasure5"] + " " + response.data.drinks[0]["strIngredient5"] + '</li>');
-            $("#ingredients-list").append('<li>' + response.data.drinks[0]["strMeasure6"] + " " + response.data.drinks[0]["strIngredient6"] + '</li>');
-            $("#ingredients-list").append('<li>' + response.data.drinks[0]["strMeasure7"] + " " + response.data.drinks[0]["strIngredient7"] + '</li>');
-            $("#ingredients-list").append('<li>' + response.data.drinks[0]["strMeasure8"] + " " + response.data.drinks[0]["strIngredient8"] + '</li>');
-            $("#ingredients-list").append('<li>' + response.data.drinks[0]["strMeasure9"] + " " + response.data.drinks[0]["strIngredient9"] + '</li>');
-            $("#ingredients-list").append('<li>' + response.data.drinks[0]["strMeasure10"] + " " + response.data.drinks[0]["strIngredient10"] + '</li>');
+          
+        
+            
+            // $("#ingredients-list").append('<li>' + response.data.drinks[0]["strMeasure1"] + " " + response.data.drinks[0]["strIngredient1"] + '</li>');
+            // $("#ingredients-list").append('<li>' + response.data.drinks[0]["strMeasure2"] + " " + response.data.drinks[0]["strIngredient2"] + '</li>');
+            // $("#ingredients-list").append('<li>' + response.data.drinks[0]["strMeasure3"] + " " + response.data.drinks[0]["strIngredient3"] + '</li>');
+            // $("#ingredients-list").append('<li>' + response.data.drinks[0]["strMeasure4"] + " " + response.data.drinks[0]["strIngredient4"] + '</li>');
+            // $("#ingredients-list").append('<li>' + response.data.drinks[0]["strMeasure5"] + " " + response.data.drinks[0]["strIngredient5"] + '</li>');
+            // $("#ingredients-list").append('<li>' + response.data.drinks[0]["strMeasure6"] + " " + response.data.drinks[0]["strIngredient6"] + '</li>');
+            // $("#ingredients-list").append('<li>' + response.data.drinks[0]["strMeasure7"] + " " + response.data.drinks[0]["strIngredient7"] + '</li>');
+            // $("#ingredients-list").append('<li>' + response.data.drinks[0]["strMeasure8"] + " " + response.data.drinks[0]["strIngredient8"] + '</li>');
+            // $("#ingredients-list").append('<li>' + response.data.drinks[0]["strMeasure9"] + " " + response.data.drinks[0]["strIngredient9"] + '</li>');
+            // $("#ingredients-list").append('<li>' + response.data.drinks[0]["strMeasure10"] + " " + response.data.drinks[0]["strIngredient10"] + '</li>');
 
             
             $("#instructions").html('<p>' + response.data.drinks[0]["strInstructions"] +'</p>');
             $("#recipe-card").show();
             $("footer").show();
             
-
-        
 
         });
     });
