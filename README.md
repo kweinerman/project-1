@@ -46,7 +46,7 @@ the nav bar will get you to any section and the page as well as links to the soc
 
 Please run any changes through kurt.weinerman@gmail.com
 
-We are looking to make a more interactive product displya section when their product goes live
+We are looking to make a more interactive product display section when their product goes live
 
 We are looking to make a more interactive map as they begin to get into stores
 
