@@ -6,7 +6,6 @@ const helpers = require("./utils/helpers");
 const session = require("express-session");
 const cookieParser = require("cookie-parser");
 const morgan = require("morgan");
-const User = require("./models/user");
 const bodyParse = require("body-parse");
 
 const sequelize = require("./config/connection");
@@ -40,17 +39,7 @@ app.use(express.static(path.join(__dirname, "public")));
 app.use(morgan("dev"));
 app.use(bodyParser.urlencoded({ extendeed: true }));
 app.use(cookieParser());
-app.use(
-  session({
-    key: "user_sid",
-    secret: "somesecret",
-    resave: false,
-    saveUninitialized: false,
-    cookie: {
-      expires: 600000,
-    },
-  })
-);
+app.use(session(sess));
 
 app.engine(
   "hbs",
