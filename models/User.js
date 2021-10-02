@@ -75,7 +75,7 @@ User.init(
 // create all defined tables in the specified database 
 
 sequelize.sync()
-  .then (() => console.log('user tavle has been succesfully updated'))
+  .then (() => console.log('user table has been succesfully updated'))
   .catch(error => console.log('An error ocurred', error));
 
 module.exports = User;
