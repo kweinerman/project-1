@@ -1,6 +1,6 @@
 [
     {
-      "'quantity'": 1,
+      "quantity": 1,
       "address_line_1": "1150 Vine St",
       "address_line_2": "Apartment 701",
       "city": "Denver",
@@ -10,7 +10,7 @@
       "order_id": 1
     },
     {
-        "'quantity'": 4,
+        "quantity": 4,
         "address_line_1": "5805 W 6th Ave",
         "address_line_2": "Apartment 701",
         "city": "Lakewood",
@@ -22,7 +22,7 @@
       
   
       {
-        "'quantity'": 3,
+        "quantity": 3,
         "address_line_1": "1100 Steele St",
         "city": "Denver",
         "state": "Colorado",
