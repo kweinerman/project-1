@@ -2,20 +2,6 @@ const { Model, DataTypes } = require("sequelize");
 const bcrypt = require("bcrypt");
 const sequelize = require("../config/connection.js");
 
-// const sequelize = new Sequelize("freshstate_db", "root", "", {
-//   host: "locathost",
-//   port: 3001,w
-//   dialect: "mysql",
-//   pool: {
-//     max: 5,
-//     min: 0,
-//     acquire: 3000,
-//     idle: 10000,
-//   },
-//   operatorsAliases: false,
-// });
-
-//Set up User Table
 class User extends Model {
   checkPassword(loginPw) {
     return bcrypt.compareSync(loginPw, this.password);
@@ -71,12 +57,5 @@ User.init(
     modelName: "user",
   }
 );
-
-// create all defined tables in the specified database
-
-sequelize
-  .sync()
-  .then(() => console.log("user table has been succesfully updated"))
-  .catch((error) => console.log("An error ocurred", error));
 
 module.exports = User;
