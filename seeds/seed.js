@@ -1,19 +1,28 @@
-const seedOrders = require('./orderseeds');
-const seedUsers = require('./userlogin');
+const sequelize = require("../config/connection");
+const { User, Order, Comment } = require("../models");
+
+const userData = require("./userlogin.json");
+const userData = require("./orderdata.json");
 
 
-const sequelize = require('../config/connection');
-
-const seedAll = async () => {
+const seedDatabase = async () => {
   await sequelize.sync({ force: true });
-  console.log('\n----- DATABASE SYNCED -----\n');
-  await seedOrders();
-  console.log('\n----- CATEGORIES SEEDED -----\n');
 
-  await seedUsers();
-  console.log('\n----- PRODUCTS SEEDED -----\n');
+  const users = await User.bulkCreate(userData, {
+    individualHooks: true,
+    returning: true,
+  });
+
+  for (const Order of userData) {
+    await Order.create({
+      ...Order,
+      user_id: users[Math.floor(Math.random() * users.length)].id,
+    });
+  }
+
+
 
   process.exit(0);
 };
 
-seedAll();
+seedDatabase();

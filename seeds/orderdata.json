@@ -1,0 +1,34 @@
+[
+    {
+      "'quantity'": 1,
+      "address_line_1": "1150 Vine St",
+      "address_line_2": "Apartment 701",
+      "city": "Denver",
+      "state": "Colorado",
+      "zip_code": 80206,
+      "product": "Citrus Lime",
+      "order_id": 1
+    },
+    {
+        "'quantity'": 4,
+        "address_line_1": "5805 W 6th Ave",
+        "address_line_2": "Apartment 701",
+        "city": "Lakewood",
+        "state": "Colorado",
+        "zip_code": 80214,
+        "product": "Hibascus Lemon",
+        "order_id": 2
+      },
+      
+  
+      {
+        "'quantity'": 3,
+        "address_line_1": "1100 Steele St",
+        "city": "Denver",
+        "state": "Colorado",
+        "zip_code": 80206,
+        "product": "Cranberry Lavender",
+        "order_id": 3
+      }
+      
+  ]
