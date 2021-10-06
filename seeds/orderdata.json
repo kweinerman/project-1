@@ -6,8 +6,7 @@
     "city": "Denver",
     "state": "Colorado",
     "zip_code": 80206,
-    "product": "Citrus Lime",
-    "order_id": 1
+    "product": "Citrus Lime"
   },
   {
     "quantity": 4,
@@ -16,8 +15,7 @@
     "city": "Lakewood",
     "state": "Colorado",
     "zip_code": 80214,
-    "product": "Hibascus Lemon",
-    "order_id": 2
+    "product": "Hibascus Lemon"
   },
   {
     "quantity": 3,
@@ -25,7 +23,6 @@
     "city": "Denver",
     "state": "Colorado",
     "zip_code": 80206,
-    "product": "Cranberry Lavender",
-    "order_id": 3
+    "product": "Cranberry Lavender"
   }
 ]

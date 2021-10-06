@@ -1,0 +1,39 @@
+[
+  {
+    "id": 1,
+    "title": "Tiki Style Guava Rum",
+    "description": "Achieve that island tropical feeling with our Tiki Style Guava Rum cocktail!",
+    "price": 15
+  },
+  {
+    "id": 2,
+    "title": "Grapefruit Vodka",
+    "description": "A kick of grapefruit flavors in a kombucha cocktail mixed with vodka!",
+    "price": 15
+  },
+  {
+    "id": 3,
+    "title": "Watermelon Mint",
+    "description": "A cocktail mix that will leave you refreshed and cooled off with a yummy watermelon and mint flavor!",
+    "price": 15
+  },
+  {
+    "id": 4,
+    "title": "Sunset Rose",
+    "description": "Get that relaxed feeling after a long day with the sunset rose flavor!",
+    "price": 15
+  },
+  {
+    "id": 5,
+    "title": "Mango",
+    "description": "Mango infused with kombucha flavors to give you that kick!",
+    "price": 15
+  },
+  {
+    "id": 5,
+    "title": "Island Pineapple",
+    "description": "Cool off with our pineapple infused cocktail!",
+    "price": 15
+  }
+
+]
