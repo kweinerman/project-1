@@ -22,8 +22,6 @@ Product.init(
     price: {
       type: DataTypes.INTEGER,
       allowNull: false,
-      primaryKey: true,
-      autoIncrement: true,
     },
     user_id: {
       type: DataTypes.INTEGER,
@@ -48,3 +46,5 @@ Product.init(
     modelName: "order",
   }
 );
+
+module.exports = Product;

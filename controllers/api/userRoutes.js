@@ -1,88 +1,62 @@
 const router = require("express").Router();
 const { User } = require("../../models");
 
-// route for Home-Page
-app.get("/", sessionChecker, (req, res) => {
-  res.redirect("/login");
-});
+router.post("/", async (req, res) => {
+  try {
+    const userData = await User.create(req.body);
 
-// route for user signup
-app
-  .route("/signup")
-  //.get(sessionChecker, (req, res) => {
-  .get((req, res) => {
-    //res.sendFile(__dirname + '/public/signup.html');
-    res.render("signup", hbsContent);
-  })
-  .post((req, res) => {
-    User.create({
-      username: req.body.username,
-      //email: req.body.email,
-      password: req.body.password,
-    })
-      .then((user) => {
-        req.session.user = user.dataValues;
-        res.redirect("/dashboard");
-      })
-      .catch((error) => {
-        res.redirect("/signup");
-      });
-  });
+    req.session.save(() => {
+      req.session.user_id = userData.id;
+      req.session.logged_in = true;
 
-// route for user Login
-app
-  .route("/login")
-  .get(sessionChecker, (req, res) => {
-    //res.sendFile(__dirname + '/public/login.html');
-    res.render("login", hbsContent);
-  })
-  .post((req, res) => {
-    var username = req.body.username,
-      password = req.body.password;
-
-    User.findOne({ where: { username: username } }).then(function (user) {
-      if (!user) {
-        res.redirect("/login");
-      } else if (!user.validPassword(password)) {
-        res.redirect("/login");
-      } else {
-        req.session.user = user.dataValues;
-        res.redirect("/dashboard");
-      }
+      res.status(200).json(userData);
     });
-  });
-
-// route for user's dashboard
-app.get("/dashboard", (req, res) => {
-  if (req.session.user && req.cookies.user_sid) {
-    hbsContent.loggedin = true;
-    hbsContent.userName = req.session.user.username;
-    //console.log(JSON.stringify(req.session.user));
-    console.log(req.session.user.username);
-    hbsContent.title = "You are logged in";
-    //res.sendFile(__dirname + '/public/dashboard.html');
-    res.render("index", hbsContent);
-  } else {
-    res.redirect("/login");
+  } catch (err) {
+    console.log(err);
+    res.status(400).json(err);
   }
 });
 
-// route for user logout
-app.get("/logout", (req, res) => {
-  if (req.session.user && req.cookies.user_sid) {
-    hbsContent.loggedin = false;
-    hbsContent.title = "You are logged out!";
-    res.clearCookie("user_sid");
-    console.log(JSON.stringify(hbsContent));
-    res.redirect("/");
-  } else {
-    res.redirect("/login");
+router.post("/login", async (req, res) => {
+  try {
+    const userData = await User.findOne({ where: { email: req.body.email } });
+
+    if (!userData) {
+      res
+        .status(400)
+        .json({ message: "Incorrect email or password, please try again" });
+      return;
+    }
+
+    const validPassword = await userData.checkPassword(req.body.password);
+
+    if (!validPassword) {
+      res
+        .status(400)
+        .json({ message: "Incorrect email or password, please try again" });
+      return;
+    }
+
+    req.session.save(() => {
+      req.session.user_id = userData.id;
+      req.session.logged_in = true;
+
+      res.json({ user: userData, message: "You are now logged in!" });
+    });
+  } catch (err) {
+    console.log(err);
+    res.status(400).json(err);
   }
 });
 
-// route for handling 404 requests(unavailable routes)
-app.use(function (req, res, next) {
-  res.status(404).send("Sorry can't find that!");
+router.post("/logout", (req, res) => {
+  if (req.session.logged_in) {
+    req.session.destroy(() => {
+      res.status(204).end();
+    });
+  } else {
+    res.status(404).end();
+  }
 });
 
 module.exports = router;
