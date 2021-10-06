@@ -1,0 +1,17 @@
+[
+  {
+    "name": "Kurt Weinerman",
+    "email": "kurt.weinerman@gmail.com",
+    "password": "rootroot"
+  },
+  {
+    "name": "John Lundy",
+    "email": "johnlundy94@gmail.com",
+    "password": "rootroot1"
+  },
+  {
+    "name": "Dan Losh",
+    "email": "dan.loshkarev@gmail.com",
+    "password": "root"
+  }
+]
