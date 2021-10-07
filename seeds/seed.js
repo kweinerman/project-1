@@ -13,12 +13,12 @@ const seedDatabase = async () => {
     returning: true,
   });
 
-  // for (const order of orderData) {
-  //   await Order.create({
-  //     ...order,
-  //     user_id: users[Math.floor(Math.random() * users.length)].id,
-  //   });
-  // }
+  for (const checkout of checkoutData) {
+    await Checkout.create({
+      ...checkout,
+      user_id: users[Math.floor(Math.random() * users.length)].id,
+    });
+  }
 
   for (const product of productData) {
     await Product.create({
