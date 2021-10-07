@@ -30,20 +30,20 @@ Product.init(
         key: "id",
       },
     },
-    order_id: {
-      type: DataTypes.INTEGER,
-      allowNull: true,
-      references: {
-        model: "order",
-        key: "id",
-      },
-    },
+    // order_id: {
+    //   type: DataTypes.INTEGER,
+    //   allowNull: true,
+    //   references: {
+    //     model: "order",
+    //     key: "id",
+    //   },
+    // },
   },
   {
     sequelize,
     freezeTableName: true,
     underscored: true,
-    modelName: "order",
+    modelName: "product",
   }
 );
 
