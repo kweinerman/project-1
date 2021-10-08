@@ -35,7 +35,7 @@ Cart.init(
       type: DataTypes.INTEGER,
       allowNull: false,
     },
-    product: {
+    product_name: {
       type: DataTypes.STRING,
       allowNull: false,
     },
@@ -43,6 +43,14 @@ Cart.init(
       type: DataTypes.INTEGER,
       references: {
         model: "user",
+        key: "id",
+      },
+    },
+    product_id: {
+      type: DataTypes.INTEGER,
+      allowNull: true,
+      references: {
+        model: "product",
         key: "id",
       },
     },
