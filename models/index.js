@@ -1,13 +1,27 @@
 const User = require("./User");
-const Order = require("./Order");
+const Product = require("./Product");
+const Cart = require("./Cart");
 
-User.hasMany(Order, {
+User.hasMany(Product, {
   foreignKey: "user_id",
   onDelete: "CASCADE",
 });
 
-Order.belongsTo(User, {
+Product.belongsTo(User, {
   foreignKey: "user_id",
 });
 
-module.exports = { User, Order };
+Product.hasMany(Cart, {
+  foreignKey: "product_id",
+  onDelete: "CASCADE",
+});
+
+Cart.belongsTo(Product, {
+  foreignKey: "product_id",
+});
+
+Cart.belongsTo(User, {
+  foreignKey: "user_id",
+});
+
+module.exports = { User, Product, Cart };
