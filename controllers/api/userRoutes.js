@@ -1,5 +1,5 @@
 const router = require("express").Router();
-const { User } = require("../../models/User");
+const { User } = require("../../models");
 
 router.post("/", async (req, res) => {
   try {
@@ -18,9 +18,9 @@ router.post("/", async (req, res) => {
 });
 
 router.post("/login", async (req, res) => {
+  console.log(req);
   try {
     const userData = await User.findOne({ where: { email: req.body.email } });
-
     if (!userData) {
       res
         .status(400)
