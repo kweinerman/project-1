@@ -22,6 +22,7 @@ router.get("/login", (req, res) => {
   res.render("login");
 });
 
+//res.render for product page
 router.get("/product", withAuth, async (req, res) => {
   try {
     // Find the logged in user based on the session ID
