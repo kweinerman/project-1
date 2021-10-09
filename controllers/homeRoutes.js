@@ -31,15 +31,32 @@ router.get("/product", withAuth, async (req, res) => {
     });
 
     const user = userData.get({ plain: true });
+    const productData = await Product.findAll();
+    const products = productData.map((product) => product.get({ plain: true }));
 
     res.render("product", {
       ...user,
       logged_in: true,
+      products,
     });
   } catch (err) {
     console.log(err);
     res.status(500).json(err);
   }
 });
+
+//res.render for product
+// router.get("/product", async (req, res) => {
+//   try {
+//     const productData = await Product.findAll();
+//     const products = productData.map((product) => product.get({ plain: true }));
+//     res.render("product", {
+//       products,
+//     });
+//   } catch (err) {
+//     console.log(err);
+//     res.status(500).json(err);
+//   }
+// });
 
 module.exports = router;
